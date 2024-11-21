@@ -6,7 +6,7 @@ class Command(BaseCommand):
     help = 'Carga datos de un archivo JSON a la base de datos'
 
     def handle(self, *args, **kwargs):
-        file_path = r'C:\Users\takes\Desktop\BACK UP - PC\INACAP\Nueva carpeta\animes_seleccionados.json'  # Ajusta la ruta
+        file_path = r'C:\Users\takes\OneDrive\Escritorio\BACK UP - NOTE\DRF\todos_los_animes.json'  # Ajusta la ruta
         with open(file_path, 'r', encoding='utf-8') as file:
             data = json.load(file)
 

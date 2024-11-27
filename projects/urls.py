@@ -1,12 +1,9 @@
-from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-from .views import AnimeViewSet
+from rest_framework import routers
+from .api import ProjectViewset
 
-router = DefaultRouter()
-router.register(r'animes', AnimeViewSet, basename='anime')
 
-urlpatterns = [
+router = routers.DefaultRouter()
 
-    path('', include(router.urls)),
-    path('api/', include(router.urls))
-]
+router.register('api/projects', ProjectViewset, 'projects')
+
+urlpatterns = router.urls
